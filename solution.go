@@ -14,6 +14,14 @@ import (
 
 type figureSidesType uint
 
+const (
+	SidesCircle figureSidesType = iota
+	_
+	_
+	SidesTriangle figureSidesType = iota
+	SidesSquare   figureSidesType = iota
+)
+
 func CalcSquare(sideLen float64, sidesNum figureSidesType) float64 {
 	switch sideLen {
 	case 0:
