@@ -23,12 +23,12 @@ const (
 )
 
 func CalcSquare(sideLen float64, sidesNum figureSidesType) float64 {
-	switch sideLen {
-	case 0:
+	switch sidesNum {
+	case SidesCircle:
 		return math.Pi * math.Pow(sideLen, 2)
-	case 3:
+	case SidesTriangle:
 		return math.Pow(sideLen, 2) * math.Sqrt(3) / 4
-	case 4:
+	case SidesSquare:
 		return math.Pow(sideLen, 2)
 	default:
 		return 0
